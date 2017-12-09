@@ -12,6 +12,7 @@ import sys
 
 if 'threading' in sys.modules:
     del sys.modules['threading']
+    
 import time
 import requests
 from unfollow_protocol import unfollow_protocol
@@ -23,7 +24,7 @@ class InstaBot:
     Instagram bot v 1.1.0
     like_per_day=1000 - How many likes set bot in one day.
 
-    media_max_like=0 - Don't like media (photo or video) if it have more than
+    media_max_like=0 - Don't like media (photo or video) if it has more than
     media_max_like likes.
 
     media_min_like=0 - Don't like media (photo or video) if it have less than
@@ -50,11 +51,9 @@ class InstaBot:
     url_logout = 'https://www.instagram.com/accounts/logout/'
     url_media_detail = 'https://www.instagram.com/p/%s/?__a=1'
     url_user_detail = 'https://www.instagram.com/%s/?__a=1'
-
     user_agent = ("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36")
     accept_language = 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
-
     # If instagram ban you - query return 400 error.
     error_400 = 0
     # If you have 3 400 error in row - looks like you banned.
