@@ -108,8 +108,8 @@ class InstaBot:
     def __init__(self,
                  login,
                  password,
-                 like_per_day=1000,
-                 media_max_like=50,
+                 like_per_day=2000,
+                 media_max_like=200,
                  media_min_like=0,
                  follow_per_day=0,
                  follow_time=5 * 60 * 60,
@@ -126,7 +126,7 @@ class InstaBot:
                                 "excellent", "amazing"],[".", "..", "...", "!",
                                                          "!!", "!!!"]],
                  comments_per_day=0,
-                 tag_list=['cat', 'car', 'dog'],
+                 tag_list=["gymrat", "gymaddict", "stoic", "gymlife", "motivation", "development", "lifemotivation", "gymmotivation", "gymaddict"],
                  max_like_for_one_tag=5,
                  unfollow_break_min=15,
                  unfollow_break_max=30,
@@ -189,8 +189,8 @@ class InstaBot:
             }
             self.s.proxies.update(proxies)
         # convert login to lower
-        self.user_login = login.lower()
-        self.user_password = password
+        self.user_login = "stoicphysique"
+        self.user_password = "20mai2011"
         self.bot_mode = 0
         self.media_by_tag = []
         self.media_on_feed = []
